@@ -1,0 +1,25 @@
+rmarkdown::html_document:
+  toc: true
+  toc_depth: 2
+  toc_float: false
+  number_sections: true
+  theme: readable
+  highlight: pygments
+
+rmarkdown::md_document:
+  variant: markdown_github
+  toc: true
+  toc_depth: 2
+
+revealjs::revealjs_presentation:
+  center: true
+  transition: fade
+  highlight: pygments
+  css: assets/reveal-styles.css
+  reveal_options:
+    margin: 0.1
+    height: "100%"
+    width: "100%"
+    slideNumber: true
+    mouseWheel: true
+    previewLinks: true
