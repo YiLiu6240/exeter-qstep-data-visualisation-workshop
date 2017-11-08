@@ -5,6 +5,7 @@ help:
 	@echo "  html      to produce tutorial with html format"
 	@echo "  revealjs  to produce tutorial as a revealjs slideshow"
 	@echo "  md        to produce tutorial with markdown format"
+	@echo "  pdf       to produce tutorial with pdf format"
 	@echo "  assets    to produce assets used in the documents"
 
 html: ${MAINFILE}
@@ -12,6 +13,9 @@ html: ${MAINFILE}
 
 md: ${MAINFILE}
 	Rscript -e "rmarkdown::render(\"${MAINFILE}\", \"rmarkdown::md_document\")"
+
+pdf: ${MAINFILE}
+	Rscript -e "rmarkdown::render(\"${MAINFILE}\", \"rmarkdown::pdf_document\")"
 
 revealjs: ${MAINFILE}
 	Rscript -e "rmarkdown::render(\"${MAINFILE}\", \"revealjs::revealjs_presentation\", \"tutorial-slides.html\")"
